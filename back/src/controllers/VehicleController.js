@@ -6,7 +6,7 @@ const create = (request, response) => {
     Vehicle.create({
         name: vehicle.name,
         model: vehicle.model,
-        price: 12000.00
+        price: vehicle.price
     }).then((result) => {
         response.status(200).send(result)
     }).catch((error) => {
@@ -88,10 +88,53 @@ const remove = (request, response) => {
     })
 }
 
+const findAllNotSelled = (request, response) => {
+
+    Vehicle.findAll({
+        where: { 
+            sellerId: null
+        }
+    }).then((result) => {
+        if (result === null) {
+            response.status(200).send({
+                'Message': `Any vehicle was found!`
+            })
+        } else {
+            response.status(200).send(result)
+        }
+    }).catch((error) => {
+        console.log(error)
+        response.status(400).send(error)
+    })
+}
+
+const findAllBySellerId = (request, response) => {
+    const id = request.params.id
+
+    Vehicle.findAll({
+        where: {
+            sellerId: id
+        }
+    }).then((result) => {
+        if (result === null) {
+            response.status(200).send({
+                'Message': `Any vehicle was found!`
+            })
+        } else {
+            response.status(200).send(result)
+        }
+    }).catch((error) => {
+        console.log(error)
+        response.status(400).send(error)
+    })
+}
+
 module.exports = {
     create,
     findAll,
     findOne,
     update,
-    remove
+    remove,
+    findAllNotSelled,
+    findAllBySellerId
 }

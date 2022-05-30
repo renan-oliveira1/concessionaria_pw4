@@ -1,0 +1,89 @@
+// .HomeSearchBox{
+//     padding: 0 40px;
+// }
+
+// .container{
+//     position: relative;
+// }
+
+// .WhiteBox--complete{
+//     z-index: 26;
+//     margin: 20px auto 32px;
+//     padding: 20px 30px;
+//     max-width: 1024px;
+//     min-width: 800px;
+//     width: auto;
+//     box-shadow: 2px rgba(158, 184, 209, .43);
+// }
+
+// .WhiteBox{
+//     display: block;
+//     border-radius: 4px;
+//     background-color: #fff;
+//     position: relative;
+//     background: #79519f;
+//     -webkit-box-shadow: 0 2px 9px 0 rgba(158, 184, 209, .41);
+//     box-shadow: 0 2px 9px 0 rgba(158, 184, 209, .41);
+//     z-index: 11;
+// }
+
+// .CarouselItems{
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: space-between;
+    
+//     align-items: center;
+// }
+
+// .CardItem{
+//     border-radius: 5px;
+//     background: #5582c6;
+    
+//     padding: 15px;
+//     img {
+//         border-radius: 5px 5px 0 0;
+//         width: 400px;
+//         height: 300px;
+//     }
+    
+//     .info {
+//         text-align: center;
+//         padding: 2px 16px;
+//         text-decoration: none;
+//         font-family: gill-sans-ultra-bold-regular;
+//         margin-left: 15px;
+//         color: #e2e55f;
+//         -webkit-text-stroke: 0.5px #1a48a0;
+    
+//         h4 {
+//             font-size: 40px;
+//         }
+    
+//         p {
+//             font-size: 30px;
+//         }
+//     }
+// }
+
+.cards{
+    margin-top: 30px;
+    background-color: #79519f;
+    height: auto;
+    width: auto;
+    border-radius: 10px;
+    .card{
+        margin: 12px;
+        background-color: #5582c6;
+        a{
+            text-decoration: none;
+            color: #e2e55f;
+            p{
+               font-size: 20px;
+            }
+        }
+        img{
+            height: 400px;
+        }
+    }
+    
+}
